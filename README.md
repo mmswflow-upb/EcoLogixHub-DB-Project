@@ -7,9 +7,15 @@ to the one currently displayed as long as all the necessary relations exist in t
 
 ## Technical Details
 
+### 1. Technologies Used
+
 This app makes use of the Angular framework for the front-end, PHP for the back-end and a MySQL database. I've used XAMPP to run the server locally 
 with a MySQL database. The Angular app employes multiple services for sending requests to the php scripts or saving data when navigating from one 
 entry to another for different purposes.
+
+### 2. Database Strucutre (ERD)
+![ERD](EcoLogixHub_ERD_Final.png)
+
 
 ## Setting it Up
 
@@ -43,9 +49,10 @@ On the left, you have a button "new", click it and you will be directed to a pag
 
 ![ss2](ss2.png)
 
-### 6. Creating the Users Table
+### 6. Creating the Tables & Inserting Data
 
-On the left, the whatsdowndb database will appear, click it then go to the "SQL" section, copy the commands from the [sql script](db_creation_script.sql) then paste it into the text box and click go.
+On the left, the whatsdowndb database will appear, click it then go to the "SQL" section, copy the commands from the [tables creation script](DB-Project_TableCreation.sql) 
+then paste it into the text box and click go, then do this again for the [data insertion script](DB-Project_DataInsertion.sql).
 
 ![ss3](ss3.png)
 
