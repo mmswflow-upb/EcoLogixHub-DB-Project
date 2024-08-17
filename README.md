@@ -39,7 +39,7 @@ Click on the "admin" button next to "MySQL", you will be directed to a PHPMyAdmi
 
 ### 5. Creating the Database for the App
 
-On the left, you have a button "new", click it and you will be directed to a page where you can set up a new DB, give it the name "whatsdowndb".
+On the left, you have a button "new", click it and you will be directed to a page where you can set up a new DB, give it the name "ecologixhub".
 
 ![ss2](ss2.png)
 
@@ -67,4 +67,14 @@ npm install -g @angular/cli
 ng version
 ```
 
-### 9. 
+### 9. Running the Angular App
+
+From the terminal, move to the Angular Web App folder, install the dependencies, then run the app using the following commands:
+
+```powershell
+cd Angular_WebApp
+npm install
+ng serve
+```
+
+### 10. Access the Website from the Browser by Searching http://localhost:4200/
