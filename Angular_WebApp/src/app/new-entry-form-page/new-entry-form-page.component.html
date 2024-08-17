@@ -1,0 +1,49 @@
+<div *ngIf="pageOpen === true">
+
+    <h1>Create New Entry</h1>
+    <h2>{{table}} Table</h2>
+    <form  action="">
+
+        <div
+        *ngFor="let format of dataFormat; index as i"
+        >
+            
+            <label name="" for="">{{format[0] + ": "}}</label>
+
+            <input *ngIf="i === 0"
+            [attr.value]="'Auto'"
+            [attr.type]="format[1]"
+            [attr.disabled]="true"
+            >
+
+            <input *ngIf="i === lockedForeignKeyColumnIndex"
+            [attr.value]="lockedForeignKeyValue"
+            [attr.type]="format[1]"
+            [attr.disabled]="true"
+            placeholder="*"
+            >
+
+            <input *ngIf="dataFormat[i][1] !== 'checkbox' && i !== lockedForeignKeyColumnIndex && i !== 0"
+            [attr.type]="format[1]"
+            [(ngModel)]="formData[i]"
+            name = "A"
+            placeholder="*"
+            >
+
+            <input 
+            *ngIf="dataFormat[i][1] === 'checkbox' ;"
+            [attr.type]="format[1]"
+            [attr.checked]="formData[i]"
+            (click)="updateCheckbox($event,i)"
+            name = "A"
+            >
+        </div>
+
+        <button type="submit"
+        (click)="sendCreateRequest($event)"
+        >
+        Create
+        </button>
+    </form>
+
+</div>

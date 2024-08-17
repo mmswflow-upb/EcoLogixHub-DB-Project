@@ -1,0 +1,29 @@
+h1{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+img{
+
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 20px;
+}
+
+label, input{
+    color: white;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: black;
+    border: none;
+}
+button{
+
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+}

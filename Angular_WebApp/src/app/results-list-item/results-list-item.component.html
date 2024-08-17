@@ -1,0 +1,20 @@
+<li>
+    <button
+    *ngIf="hasImage === false"
+    (click)="openOverviewPage($event)"
+    >
+    <h1 *ngFor="let field of data.slice(0, 3); index as indx">
+            {{dataFormat[indx][0]}}: {{field}}
+        </h1>
+    </button>
+
+    <button
+    *ngIf="hasImage === true"
+    (click)="openOverviewPage($event)"
+    >
+    <img [attr.src]="data[1]" alt="">
+    <h1>{{dataFormat[0][0] + ": " + data[0]}}</h1>
+    <h1>{{dataFormat[2][0] + ": " + data[2]}}</h1>
+    </button>
+</li>
+        

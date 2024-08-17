@@ -1,0 +1,29 @@
+results-list-item{
+    
+    display: block;
+    background-color: rgb(26, 26, 26);
+    overflow:hidden;
+    text-align: left;
+    margin-bottom: 40px;
+    width: 40vw;
+    margin-left: 30vw;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+h1{
+    color: white;
+    margin-top: 20px;
+}
+
+ul{
+    overflow-y: scroll;
+    width:fit-content;
+    height: 65vh
+}
+
+ul::-webkit-scrollbar{
+
+    display: none;
+}
+

@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: black;
+    margin:0px;
+    overflow-y:scroll;
+}
+
+top-bar, search-bar{
+display: block;
+}
+
+body::-webkit-scrollbar{
+
+    display: none;
+}
+

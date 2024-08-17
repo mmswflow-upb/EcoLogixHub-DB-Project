@@ -1,0 +1,36 @@
+<div *ngIf="pageOpen === true">
+    <form>
+        <input name="search-bar-text" 
+        type="text" 
+        placeholder="type search pattern" 
+        [(ngModel)]="searchText"
+        >
+        <select name = "filter-selection" 
+        [(ngModel)]="selectedTableIndex"
+        >
+        <option *ngFor="let tableName of availableTablesForSearch; index as i" [value] = "i">{{tableName}}</option>
+        </select>
+    
+        <button type="submit" 
+        (click)="sendSearchRequest($event)"
+        >
+        Search
+        </button>
+    
+        <button type="submit"
+        (click)="openNewEntryForm($event)"
+        >
+        New</button>
+    </form>
+    
+    <div *ngIf="fetchedData.length > 0 ; else noResultsFound">    
+        <results-list 
+        [fetchedData]="fetchedData"
+        >
+        </results-list>
+    </div>
+    
+    <ng-template #noResultsFound>
+    <h1>No Results Found</h1>
+    </ng-template>
+</div>

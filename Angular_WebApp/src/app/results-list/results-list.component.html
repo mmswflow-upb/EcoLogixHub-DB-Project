@@ -1,0 +1,8 @@
+<h1>Search Results:</h1>
+<ul>
+    <results-list-item 
+    *ngFor="let dataObj of fetchedData ; index as i"
+    [data]="fetchedData[i]"
+    >
+    </results-list-item>
+</ul>

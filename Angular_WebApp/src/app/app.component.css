@@ -1,0 +1,31 @@
+top-bar{
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: space-between;
+}
+
+overview-page{
+    
+    margin-top: 4vh;
+    display: block;
+    text-align: center;
+    background-color: rgb(15, 15, 15);
+    width: 20vw;
+    margin-left: 40vw;
+}
+
+search-page{
+    margin-top: 4vh;
+    display: block;
+    text-align: center;
+    
+}
+
+new-entry-form-page{
+    margin-top: 4vh;
+    display: block;
+    text-align: left;
+    background-color: rgb(15, 15, 15);
+    width: 20vw;
+    margin-left:40vw;
+}

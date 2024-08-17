@@ -1,0 +1,30 @@
+
+ input[type="text"],
+ select,
+ button {
+    color: white;
+    background-color: rgb(26, 26, 26);
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+h1{
+    color: white;
+    font-size: 30px;
+}
+
+results-list{
+
+background-color: none;
+overflow-y:scroll;
+
+}
+
+results-list::-webkit-scrollbar{
+
+    display: none;
+}
+
+
+  

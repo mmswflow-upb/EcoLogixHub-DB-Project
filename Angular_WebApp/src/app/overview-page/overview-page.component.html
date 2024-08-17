@@ -1,0 +1,89 @@
+<div *ngIf="pageOpen === true">
+    <div *ngIf="displayedData.length > 0">
+
+        <form action="">
+
+            <img 
+            *ngIf="hasImage === true"
+            [attr.src]="displayedData[1]" 
+            alt="">
+
+            <div 
+            *ngFor="let fieldArr of displayedDataFormat; index as i"
+            >
+                <label 
+                name=""
+                for=""
+                >
+                    {{fieldArr[0]}}: 
+                </label>
+        
+                <input
+                *ngIf="i === 0"
+                [attr.value]="displayedData[0]" 
+                type="text"
+                disabled="true"
+                >
+
+                <input
+                name={{i}}
+                *ngIf="i !== 0 && displayedDataFormat[i][1] !== 'checkbox'"
+                [(ngModel)]="displayedData[i]"
+                [disabled]="!editMode"
+                type="text"
+                placeholder="*"
+                >
+
+                <checkbox-field
+                *ngIf="displayedDataFormat[i][1] === 'checkbox'"
+                [(checkboxValue)]="checkboxValue"
+                [disabled] = "!editMode">
+                </checkbox-field>
+
+            </div>
+           
+            <div
+            *ngFor="let navTab of navigationTables; index as i"
+            >
+                <button
+                (click)="navigateToTable($event,navTab)"
+                >
+                To {{navTab}}
+                </button>
+            </div>
+            
+            <button 
+            *ngIf="editMode === true"
+            (click)="sendUpdateRequest($event) "
+            >
+            Save Changes
+            </button>
+
+            <button type="submit"
+            (click)="switchEditMode()"
+            >
+            {{editButtonText}}
+            </button>
+            
+            <button 
+            type="submit"
+            (click)="sendDeleteRequest($event)"
+            >
+            Delete
+            </button>
+        </form>
+    </div>
+    <div *ngIf="displayedData === undefined || displayedData.length === 0">
+        <h1>No Data Found</h1>
+        <button
+        (click)="createNewEntry($event)"
+        >
+            Create a new entry
+        </button>
+        <button
+        (click)="goBack($event)"
+        >
+            Go Back
+        </button>
+    </div>
+</div>
